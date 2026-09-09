@@ -1,65 +1,65 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 :root {
-  --bg: #fafafa;
-  --ink: #171717;
-  --muted: #666666;
-  --line: #dddddd;
-  --soft: #f1f3f4;
-  --soft-alt: #fff2ee;
-  --accent: #b43625;
-  --max: 900px;
+  --background-color: #ffffff;
+  --background-secondary-color: #f6f6f6;
+  --text-color: #111111;
+  --text-secondary-color: #666666;
+  --border-primary: #dddddd;
+  --primary: #d04a36;
+  --container: 760px;
 }
 
 html {
+  background: var(--background-color);
+  color: var(--text-color);
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--bg);
-  color: var(--ink);
+  margin: 0;
   font-family: "DM Sans", Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--text-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .site-header,
 main,
 .site-footer {
-  width: min(var(--max), calc(100% - 32px));
+  width: min(var(--container), calc(100% - 28px));
   margin: 0 auto;
 }
 
 .site-header {
-  min-height: 64px;
+  min-height: 58px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  border-bottom: 1px solid var(--line);
+  gap: 16px;
+  border-bottom: 1px solid var(--border-primary);
 }
 
 .brand {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 nav {
   display: flex;
-  gap: 18px;
+  gap: 14px;
 }
 
 nav a,
@@ -70,49 +70,59 @@ nav a,
 }
 
 .intro {
-  padding: 58px 0 52px;
-  border-bottom: 1px solid var(--line);
+  padding: 42px 0;
+  border-bottom: 1px solid var(--border-primary);
 }
 
-.eyebrow,
-.sample-row span {
-  color: var(--accent);
+.meta {
+  color: var(--primary);
+  display: block;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: .14em;
+  letter-spacing: .12em;
+  margin: 0 0 8px;
   text-transform: uppercase;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 h1 {
-  font-size: clamp(48px, 9vw, 86px);
+  font-size: 56px;
   line-height: 1;
-  letter-spacing: 0;
-  margin-top: 10px;
 }
 
 h2 {
-  font-size: 28px;
-  line-height: 1.15;
-  letter-spacing: 0;
+  font-size: 25px;
+  line-height: 1.2;
 }
 
 h3 {
   font-size: 17px;
-  line-height: 1.25;
-  letter-spacing: 0;
+  line-height: 1.3;
 }
 
 .role {
-  max-width: 680px;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 700;
-  margin-top: 18px;
+  margin-top: 14px;
+}
+
+.summary,
+.section > p,
+.section-head p,
+.sample-row p,
+.plain-list {
+  color: var(--text-secondary-color);
 }
 
 .summary {
-  max-width: 660px;
-  color: var(--muted);
-  margin-top: 10px;
+  max-width: 620px;
+  margin-top: 8px;
 }
 
 .intro-links,
@@ -120,49 +130,32 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 22px;
-}
-
-.intro-links a,
-.contact-links a {
-  border-bottom: 2px solid var(--ink);
-  padding-bottom: 2px;
+  margin-top: 18px;
 }
 
 .section {
-  padding: 42px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.section > p,
-.section-head p,
-.sample-row p,
-.plain-list {
-  color: var(--muted);
+  padding: 34px 0;
+  border-bottom: 1px solid var(--border-primary);
 }
 
 .section-head {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  gap: 28px;
-  margin-bottom: 10px;
+  gap: 20px;
+  margin-bottom: 6px;
 }
 
 .section-head p {
-  max-width: 340px;
-}
-
-.sample-list {
-  margin-top: 8px;
+  max-width: 320px;
 }
 
 .sample-row {
   display: grid;
-  grid-template-columns: minmax(220px, .42fr) minmax(0, .58fr);
-  gap: 28px;
-  padding: 22px 0;
-  border-top: 1px solid var(--line);
+  grid-template-columns: minmax(210px, .42fr) minmax(0, .58fr);
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border-primary);
 }
 
 .sample-row:first-child {
@@ -170,81 +163,71 @@ h3 {
 }
 
 .sample-row h3 {
-  margin-top: 6px;
-}
-
-.sample-row p {
   margin-top: 4px;
 }
 
 .sample-slots {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 8px;
 }
 
 .slot {
-  min-height: 126px;
+  min-height: 100px;
   display: flex;
   align-items: end;
-  justify-content: start;
-  background:
-    linear-gradient(135deg, rgba(23, 23, 23, .04), rgba(23, 23, 23, 0)),
-    repeating-linear-gradient(45deg, var(--soft), var(--soft) 10px, #e7ecee 10px, #e7ecee 20px);
-  border: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 13px;
+  background: var(--background-secondary-color);
+  border: 1px solid var(--border-primary);
+  color: var(--text-secondary-color);
+  font-size: 12px;
   font-weight: 800;
-  padding: 10px;
+  padding: 8px;
   text-transform: uppercase;
 }
 
 .slot.after {
-  background:
-    linear-gradient(135deg, rgba(180, 54, 37, .08), rgba(23, 23, 23, 0)),
-    repeating-linear-gradient(-45deg, var(--soft-alt), var(--soft-alt) 10px, #edf2f2 10px, #edf2f2 20px);
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .plain-list {
   display: grid;
-  gap: 8px;
+  gap: 5px;
   list-style-position: inside;
-  margin-top: 12px;
+  margin: 10px 0 0;
+  padding: 0;
 }
 
 .contact p {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .site-footer {
-  min-height: 70px;
+  min-height: 58px;
   display: flex;
   align-items: center;
-  color: var(--muted);
+  color: var(--text-secondary-color);
   font-size: 13px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 640px) {
   .site-header {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    padding: 14px 0;
+    padding: 12px 0;
   }
 
   nav {
     width: 100%;
     justify-content: space-between;
-    gap: 10px;
   }
 
   .intro {
-    padding: 40px 0;
+    padding: 34px 0;
   }
 
   h1 {
-    font-size: 54px;
+    font-size: 48px;
   }
 
   .role {
@@ -252,7 +235,7 @@ h3 {
   }
 
   .section {
-    padding: 34px 0;
+    padding: 28px 0;
   }
 
   .section-head,
@@ -260,35 +243,8 @@ h3 {
     display: block;
   }
 
-  .section-head p {
-    margin-top: 8px;
-  }
-
+  .section-head p,
   .sample-slots {
-    margin-top: 14px;
-  }
-}
-
-@media (max-width: 430px) {
-  .site-header,
-  main,
-  .site-footer {
-    width: min(100% - 24px, var(--max));
-  }
-
-  nav a {
-    font-size: 13px;
-  }
-
-  h1 {
-    font-size: 48px;
-  }
-
-  .sample-slots {
-    gap: 8px;
-  }
-
-  .slot {
-    min-height: 112px;
+    margin-top: 10px;
   }
 }
