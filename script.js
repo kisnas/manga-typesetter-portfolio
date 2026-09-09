@@ -1,14 +1,5 @@
-const slider = document.getElementById("compareSlider");
-const after = document.getElementById("afterLayer");
-const line = document.getElementById("compareLine");
+const year = document.getElementById("year");
 
-function updateCompare() {
-  const value = slider.value;
-  after.style.width = value + "%";
-  line.style.left = value + "%";
+if (year) {
+  year.textContent = new Date().getFullYear();
 }
-
-slider.addEventListener("input", updateCompare);
-updateCompare();
-
-document.getElementById("year").textContent = new Date().getFullYear();

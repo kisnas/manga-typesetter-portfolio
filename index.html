@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Manga typesetting, lettering, cleaning, redraw and SFX portfolio." />
-  <title>Phong — Manga Typesetter</title>
+  <meta name="description" content="Phong portfolio for manga typesetting, lettering, cleaning, redraw and SFX work." />
+  <title>Phong | Manga Typesetter</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <a href="#top" class="logo">PHONG<span>.</span></a>
-    <nav>
+  <header class="site-header">
+    <a href="#top" class="brand">Phong</a>
+    <nav aria-label="Primary navigation">
       <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#about">About</a>
@@ -22,159 +22,147 @@
   </header>
 
   <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy">
-        <p class="eyebrow">MANGA TYPESETTER · LETTERER</p>
-        <h1>Clean lettering.<br><span>Natural reading.</span></h1>
+    <section class="intro">
+      <div class="intro-copy">
+        <p class="eyebrow">Manga typesetter / letterer</p>
+        <h1>Clean pages. Readable lettering. Respect for the original art.</h1>
         <p class="lead">
-          Manga typesetting, cleaning, redraw and SFX recreation with attention
-          to readability, balance and the feeling of the original page.
+          Typesetting, cleaning, redraw and SFX support for manga and webtoon projects.
         </p>
-        <div class="actions">
-          <a class="button primary" href="#work">View selected work</a>
-          <a class="button secondary" href="#contact">Contact me</a>
-        </div>
       </div>
 
-      <div class="status-card">
-        <div class="status"><span></span> Available for freelance work</div>
-        <div class="mini-grid">
-          <div><small>Focus</small><strong>Manga / Webtoon</strong></div>
-          <div><small>Workflow</small><strong>JP → EN</strong></div>
-          <div><small>Tool</small><strong>Photoshop</strong></div>
-          <div><small>Delivery</small><strong>Remote</strong></div>
-        </div>
+      <aside class="availability" aria-label="Availability and workflow">
+        <p><span></span> Available for freelance work</p>
+        <dl>
+          <div><dt>Focus</dt><dd>Manga / Webtoon</dd></div>
+          <div><dt>Tool</dt><dd>Photoshop</dd></div>
+          <div><dt>Delivery</dt><dd>Remote</dd></div>
+        </dl>
+      </aside>
+
+      <div class="actions" aria-label="Page actions">
+        <a class="button primary" href="#work">View work</a>
+        <a class="button secondary" href="#contact">Contact</a>
       </div>
     </section>
 
-    <section id="work" class="section shell">
-      <div class="section-title">
-        <div>
-          <p class="eyebrow">SELECTED WORK</p>
-          <h2>Typesetting samples</h2>
-        </div>
-        <p>Replace the placeholders below with your strongest pages.</p>
+    <section id="work" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Selected work</p>
+        <h2>Before / after samples</h2>
+        <p>Six slots are ready for finished portfolio images. Replace each placeholder with matching before and after exports.</p>
       </div>
 
-      <article class="featured-card">
-        <div class="sample placeholder">
-          <div>
-            <b>FEATURED SAMPLE</b>
-            <span>Drop your best finished page here</span>
+      <div class="sample-grid">
+        <article class="sample-card">
+          <div class="sample-pair">
+            <div class="sample-box"><span>Before</span><strong>Sample 01</strong></div>
+            <div class="sample-box after"><span>After</span><strong>Sample 01</strong></div>
           </div>
-        </div>
-        <div class="featured-info">
-          <p class="tag">FEATURED</p>
-          <h3>Dialogue + SFX + Redraw</h3>
-          <p>
-            A full-page sample showing dialogue placement, font matching,
-            cleaning and English SFX recreation.
-          </p>
-          <div class="chips">
-            <span>Typesetting</span>
-            <span>Cleaning</span>
-            <span>SFX</span>
-            <span>Redraw</span>
-          </div>
-        </div>
-      </article>
-
-      <div class="work-grid">
-        <article class="work-card">
-          <div class="sample placeholder"><div><b>SAMPLE 01</b><span>Dialogue typesetting</span></div></div>
-          <div class="work-info"><h3>Dialogue Typesetting</h3><p>Bubble fitting · emphasis · pacing</p></div>
+          <h3>Dialogue cleanup</h3>
+          <p>Bubble fitting, spacing and natural line breaks.</p>
         </article>
 
-        <article class="work-card">
-          <div class="sample placeholder"><div><b>SAMPLE 02</b><span>SFX recreation</span></div></div>
-          <div class="work-info"><h3>SFX Recreation</h3><p>JP SFX → English · style matching</p></div>
+        <article class="sample-card">
+          <div class="sample-pair">
+            <div class="sample-box"><span>Before</span><strong>Sample 02</strong></div>
+            <div class="sample-box after"><span>After</span><strong>Sample 02</strong></div>
+          </div>
+          <h3>SFX recreation</h3>
+          <p>English SFX matched to the page energy.</p>
         </article>
 
-        <article class="work-card">
-          <div class="sample placeholder"><div><b>SAMPLE 03</b><span>Cleaning / redraw</span></div></div>
-          <div class="work-info"><h3>Cleaning & Redraw</h3><p>Text removal · artwork reconstruction</p></div>
+        <article class="sample-card">
+          <div class="sample-pair">
+            <div class="sample-box"><span>Before</span><strong>Sample 03</strong></div>
+            <div class="sample-box after"><span>After</span><strong>Sample 03</strong></div>
+          </div>
+          <h3>Redraw support</h3>
+          <p>Artwork repair where source text was removed.</p>
+        </article>
+
+        <article class="sample-card">
+          <div class="sample-pair">
+            <div class="sample-box"><span>Before</span><strong>Sample 04</strong></div>
+            <div class="sample-box after"><span>After</span><strong>Sample 04</strong></div>
+          </div>
+          <h3>Dense dialogue</h3>
+          <p>Readable placement on text-heavy panels.</p>
+        </article>
+
+        <article class="sample-card">
+          <div class="sample-pair">
+            <div class="sample-box"><span>Before</span><strong>Sample 05</strong></div>
+            <div class="sample-box after"><span>After</span><strong>Sample 05</strong></div>
+          </div>
+          <h3>Font matching</h3>
+          <p>Consistent tone across narration and dialogue.</p>
+        </article>
+
+        <article class="sample-card">
+          <div class="sample-pair">
+            <div class="sample-box"><span>Before</span><strong>Sample 06</strong></div>
+            <div class="sample-box after"><span>After</span><strong>Sample 06</strong></div>
+          </div>
+          <h3>Final polish</h3>
+          <p>Balanced pages prepared for release.</p>
         </article>
       </div>
     </section>
 
-    <section class="section shell">
-      <div class="section-title">
-        <div>
-          <p class="eyebrow">BEFORE / AFTER</p>
-          <h2>See the difference</h2>
-        </div>
-        <p>Drag the handle to compare the raw and finished version.</p>
-      </div>
-
-      <div class="compare" id="compare">
-        <div class="compare-layer before">
-          <div class="compare-placeholder">
-            <b>ORIGINAL / RAW</b>
-            <span>Replace with your Japanese page</span>
-          </div>
-        </div>
-        <div class="compare-layer after" id="afterLayer">
-          <div class="compare-placeholder">
-            <b>ENGLISH TYPESET</b>
-            <span>Replace with your finished page</span>
-          </div>
-        </div>
-        <div class="compare-line" id="compareLine"></div>
-        <input id="compareSlider" type="range" min="0" max="100" value="50" aria-label="Before and after comparison" />
-      </div>
-    </section>
-
-    <section id="services" class="section shell">
-      <div class="section-title">
-        <div>
-          <p class="eyebrow">SERVICES</p>
-          <h2>What I do</h2>
-        </div>
-      </div>
-
-      <div class="service-grid">
-        <article><span>01</span><h3>Typesetting</h3><p>Natural placement, line breaks, sizing and emphasis for dialogue.</p></article>
-        <article><span>02</span><h3>Cleaning</h3><p>Removal of original text while preserving surrounding artwork.</p></article>
-        <article><span>03</span><h3>SFX</h3><p>English SFX recreation that follows the energy and style of the source.</p></article>
-        <article><span>04</span><h3>Redraw</h3><p>Rebuilding artwork hidden behind text and sound effects.</p></article>
-      </div>
-    </section>
-
-    <section id="about" class="section shell about">
+    <section id="services" class="section split-section">
       <div>
-        <p class="eyebrow">ABOUT</p>
+        <p class="eyebrow">Services</p>
+        <h2>Focused production support</h2>
+      </div>
+      <div class="service-list">
+        <article>
+          <h3>Typesetting</h3>
+          <p>Dialogue placement, emphasis, sizing and reading flow.</p>
+        </article>
+        <article>
+          <h3>Cleaning + redraw</h3>
+          <p>Source text removal with careful artwork reconstruction.</p>
+        </article>
+        <article>
+          <h3>SFX lettering</h3>
+          <p>English SFX treatment that fits the original panel style.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section split-section">
+      <div>
+        <p class="eyebrow">About</p>
         <h2>Detail-focused manga lettering.</h2>
       </div>
-      <div class="about-copy">
+      <div class="body-copy">
         <p>
-          I'm Phong, a manga typesetter focused on clean, readable English
-          lettering while keeping the original composition and mood intact.
+          I'm Phong, a manga typesetter focused on clean English lettering that keeps
+          the original composition intact.
         </p>
         <p>
-          I work with Photoshop and can handle dialogue, cleaning, redraws and
-          SFX recreation for manga and webtoon projects.
+          I work in Photoshop and can support manga or webtoon chapters with
+          typesetting, cleaning, redraw and SFX tasks.
         </p>
       </div>
     </section>
 
-    <section id="contact" class="section shell">
-      <div class="contact-card">
-        <div>
-          <p class="eyebrow">CONTACT</p>
-          <h2>Need a typesetter?</h2>
-          <p>Replace the links below with your actual contact information.</p>
-        </div>
-        <div class="contact-links">
-          <a href="mailto:your-email@example.com">Email ↗</a>
-          <a href="#" target="_blank" rel="noreferrer">Discord ↗</a>
-          <a href="https://github.com/kisnas" target="_blank" rel="noreferrer">GitHub ↗</a>
-        </div>
+    <section id="contact" class="section contact-section">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Need a typesetter?</h2>
+        <p>Replace these placeholder links with your email and Discord when ready.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:your-email@example.com">Email</a>
+        <a href="#">Discord</a>
       </div>
     </section>
   </main>
 
-  <footer class="shell footer">
-    <span>© <span id="year"></span> Phong</span>
+  <footer class="site-footer">
+    <span>&copy; <span id="year"></span> Phong</span>
     <span>Manga Typesetter & Letterer</span>
   </footer>
 
