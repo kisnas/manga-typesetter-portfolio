@@ -158,35 +158,25 @@ nav a {
 
 .frame {
   aspect-ratio: 2 / 3;
-  display: flex;
-  align-items: flex-end;
   background:
-    linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,255,255,0)),
+    linear-gradient(135deg, rgba(0,0,0,.025), rgba(255,255,255,.7)),
     var(--soft);
   border: 1px solid var(--line);
-  padding: 10px;
 }
 
 .frame.done {
-  background: #fff4f1;
-}
-
-.frame span,
-.case-label {
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.frame.done span {
-  color: var(--accent);
+  background:
+    linear-gradient(135deg, rgba(193,59,42,.06), rgba(255,255,255,.78)),
+    #fff4f1;
 }
 
 .case-label {
   color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
   margin-top: 10px;
+  text-transform: uppercase;
 }
 
 .split {
