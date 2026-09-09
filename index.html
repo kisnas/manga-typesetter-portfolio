@@ -3,58 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Phong — manga typesetter and letterer portfolio." />
-  <title>Phong — Manga Typesetter / Letterer</title>
+  <meta name="description" content="Phong manga typesetting and lettering portfolio samples." />
+  <title>Phong | Manga Typesetter / Letterer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Hind:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="site">
-    <header class="intro">
-      <p class="role">Manga Typesetter / Letterer</p>
-      <h1>Phong</h1>
-      <p class="bio">
-        I work on manga typesetting, lettering, cleaning, redraws and SFX using Adobe Photoshop.
-        Available for freelance and remote projects.
-      </p>
+  <main class="page">
+    <div class="layout">
+      <header class="intro" aria-labelledby="site-title">
+        <h1 id="site-title">PHONG</h1>
+        <p class="role">Manga Typesetter / Letterer</p>
 
-      <div class="contact">
-        <a href="mailto:your-email@example.com">Email</a>
-        <a href="#">Discord</a>
-        <a href="https://github.com/kisnas" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-    </header>
+        <address class="contact" aria-label="Contact">
+          <a href="mailto:tlp.typesettin@gmail.com">tlp.typesettin@gmail.com</a>
+          <span>Discord: your-discord-handle</span>
+          <a href="https://github.com/kisnas">github.com/kisnas</a>
+        </address>
+      </header>
 
-    <section class="gallery" aria-label="Manga typesetting samples">
-      <figure class="sample">
-        <img src="assets/sample-01.webp" alt="Manga typesetting sample 1" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
-        <div class="placeholder" hidden>Sample 01</div>
-      </figure>
+      <section class="portfolio" aria-labelledby="portfolio-title">
+        <div class="intro-copy">
+          <p>
+            I typeset and letter manga pages with attention to reading flow,
+            tone, and clean page balance. I like lettering that supports the
+            story without pulling attention away from the art.
+          </p>
+        </div>
 
-      <figure class="sample">
-        <img src="assets/sample-02.webp" alt="Manga typesetting sample 2" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
-        <div class="placeholder" hidden>Sample 02</div>
-      </figure>
+        <div class="sample-menu">
+          <button class="sample-menu-toggle" type="button" aria-expanded="false" aria-controls="sample-options">
+            Lettering Samples
+          </button>
 
-      <figure class="sample">
-        <img src="assets/sample-03.webp" alt="Manga typesetting sample 3" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
-        <div class="placeholder" hidden>Sample 03</div>
-      </figure>
+          <div class="sample-options" id="sample-options" hidden>
+            <button class="sample-option is-active" type="button" data-filter="manga">Manga</button>
+            <button class="sample-option" type="button" data-filter="manhwa">Manhwa</button>
+          </div>
+        </div>
 
-      <figure class="sample">
-        <img src="assets/sample-04.webp" alt="Manga typesetting sample 4" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
-        <div class="placeholder" hidden>Sample 04</div>
-      </figure>
+        <h2 id="portfolio-title">Manga</h2>
 
-      <figure class="sample">
-        <img src="assets/sample-05.webp" alt="Manga typesetting sample 5" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
-        <div class="placeholder" hidden>Sample 05</div>
-      </figure>
+        <div class="gallery">
+          <!-- Replace these files with final samples. Duplicate a figure to add more. -->
+          <figure class="sample" data-kind="manga" data-file="assets/samples/manga-01.webp" data-alt="Manga lettering sample 01"></figure>
+          <figure class="sample" data-kind="manga" data-file="assets/samples/manga-02.webp" data-alt="Manga lettering sample 02"></figure>
+          <figure class="sample" data-kind="manga" data-file="assets/samples/manga-03.webp" data-alt="Manga lettering sample 03"></figure>
+          <figure class="sample" data-kind="manga" data-file="assets/samples/manga-04.webp" data-alt="Manga lettering sample 04"></figure>
+          <figure class="sample" data-kind="manhwa" data-file="assets/samples/manhwa-01.webp" data-alt="Manhwa lettering sample 01" hidden></figure>
+          <figure class="sample" data-kind="manhwa" data-file="assets/samples/manhwa-02.webp" data-alt="Manhwa lettering sample 02" hidden></figure>
+          <figure class="sample" data-kind="manhwa" data-file="assets/samples/manhwa-03.webp" data-alt="Manhwa lettering sample 03" hidden></figure>
+        </div>
 
-      <figure class="sample">
-        <img src="assets/sample-06.webp" alt="Manga typesetting sample 6" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
-        <div class="placeholder" hidden>Sample 06</div>
-      </figure>
-    </section>
+        <footer class="footer">
+          <span>&copy; <span id="year"></span> Phong</span>
+        </footer>
+      </section>
+    </div>
   </main>
+
+  <dialog class="lightbox" aria-label="Image preview">
+    <button class="lightbox-close" type="button" aria-label="Close image preview"></button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image"></button>
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image"></button>
+    <img alt="" />
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
