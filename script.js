@@ -123,6 +123,7 @@ sampleMenuToggle?.addEventListener("click", () => {
   const isOpen = sampleMenuToggle.getAttribute("aria-expanded") === "true";
 
   sampleMenuToggle.setAttribute("aria-expanded", String(!isOpen));
+  sampleMenuToggle.parentElement?.classList.toggle("is-open", !isOpen);
 
   if (sampleOptions) {
     sampleOptions.hidden = isOpen;
@@ -136,6 +137,7 @@ sampleOptionButtons.forEach((button) => {
     if (sampleOptions && sampleMenuToggle) {
       sampleOptions.hidden = true;
       sampleMenuToggle.setAttribute("aria-expanded", "false");
+      sampleMenuToggle.parentElement?.classList.remove("is-open");
     }
   });
 });
