@@ -318,6 +318,29 @@ h2 {
   display: none;
 }
 
+.disclaimer {
+  max-width: 680px;
+  margin: 54px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.disclaimer h2 {
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+
+.disclaimer p + p {
+  margin-top: 11px;
+}
+
+.disclaimer .signature {
+  color: var(--ink-strong);
+}
+
 .footer {
   margin-top: 30px;
   color: var(--muted);
