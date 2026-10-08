@@ -115,7 +115,13 @@ function setSampleFilter(filter) {
   });
 
   if (portfolioTitle) {
-    portfolioTitle.textContent = filter === "manhwa" ? "Manhwa" : "Manga";
+    const titles = {
+      manga: "Manga",
+      manhwa: "Manhwa",
+      webtoon: "Webtoon",
+    };
+
+    portfolioTitle.textContent = titles[filter] || "Manga";
   }
 }
 
