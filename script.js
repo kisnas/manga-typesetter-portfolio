@@ -6,6 +6,7 @@ const lightboxPrev = lightbox?.querySelector(".lightbox-prev");
 const lightboxNext = lightbox?.querySelector(".lightbox-next");
 const loadedSamples = [];
 let currentSampleIndex = -1;
+const TALL_IMAGE_RATIO = 2.2;
 const sampleMenuToggle = document.querySelector(".sample-menu-toggle");
 const sampleOptions = document.getElementById("sample-options");
 const sampleOptionButtons = document.querySelectorAll(".sample-option");
@@ -29,6 +30,9 @@ function showSample(index) {
   currentSampleIndex = index;
   lightboxImage.src = sample.src;
   lightboxImage.alt = sample.alt;
+  lightbox.dataset.kind = sample.kind || "";
+  lightbox.dataset.layout = sample.isTall ? "scroll" : "fit";
+  lightbox.scrollTop = 0;
 
   if (!lightbox.open) {
     lightbox.showModal();
@@ -77,7 +81,13 @@ document.querySelectorAll(".sample").forEach((sample, index) => {
 
   image.addEventListener("load", () => {
     sample.classList.add("is-loaded");
-    loadedSamples[index] = { src: link.href, alt, element: sample };
+    loadedSamples[index] = {
+      src: link.href,
+      alt,
+      kind: sample.dataset.kind,
+      isTall: image.naturalHeight / image.naturalWidth >= TALL_IMAGE_RATIO,
+      element: sample,
+    };
   });
 
   image.addEventListener("error", () => {
@@ -117,7 +127,6 @@ function setSampleFilter(filter) {
   if (portfolioTitle) {
     const titles = {
       manga: "Manga",
-      manhwa: "Manhwa",
       webtoon: "Webtoon",
     };
 
@@ -150,6 +159,12 @@ sampleOptionButtons.forEach((button) => {
 
 lightboxClose?.addEventListener("click", () => {
   lightbox?.close();
+});
+
+lightboxImage?.addEventListener("load", () => {
+  if (lightbox) {
+    lightbox.scrollTop = 0;
+  }
 });
 
 lightboxPrev?.addEventListener("click", (event) => {
